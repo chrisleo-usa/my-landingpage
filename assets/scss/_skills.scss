@@ -1,0 +1,147 @@
+.skills {
+  padding: 1.875rem;
+  background: linear-gradient(176.04deg, #FBFBFB -91.99%, #D7D7D7 -15.07%, #AAAAAA 73.68%);
+  .title {
+    color: $titleColorWhite;
+    margin-bottom: 1.875rem;
+  }
+
+  .skills-progress {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 0.9375rem;
+    width: 100%;
+
+    .progress-content {
+      position: relative;
+      margin-bottom: 0.3125rem;
+
+      .progressbar-text {
+        top: -0.0625rem;
+      }
+
+      @media (min-width: 480px) {
+        p {
+          font-size: 1.1rem;
+        }
+      }
+
+      .progressBar {
+        margin: 0.3125rem 0;
+
+        svg {
+          border-radius: 0.625rem;
+        }
+      }
+    }
+  }
+
+
+  .hard-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-row-gap: 1.875rem;
+
+    .skills-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .skill-animate {
+        margin: auto;
+        max-width: 150px;
+      }
+    } 
+
+  }
+
+  @media (min-width: 480px) {
+    .second-skills {
+      margin: 1.25rem 0;
+    }
+
+    .hard-skills {
+      margin: 2rem 0;
+
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+
+      .skills-wrapper:nth-last-child(1) {
+        grid-column: 2/2;
+      }
+    }
+  }
+}
+
+
+
+
+@media (min-width: 600px) {
+  .skills .skills-progress {
+    grid-row-gap: 1.5rem;
+
+    .progress-content {
+      display: grid; 
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      align-items: center;
+  
+      .progressBar .progressbar-text {
+        top: -0.937rem;
+      }
+    }
+
+  }
+  .skills .hard-skills {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+
+    .skills-wrapper:nth-child(9) {
+      grid-column: 2/2;
+    }
+    .skills-wrapper:nth-child(10) {
+      grid-column: 3/3;
+    }
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .skills .skills-progress {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2.5rem 2rem;
+    margin: 4rem 0;
+
+    .skills-progress p {
+      font-size: 1rem;
+    }
+  }
+
+  .progressBar {
+    height: 50%;
+
+    svg {
+      position: relative;
+      top: 25%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .skills .hard-skills {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    .skills-wrapper:nth-child(9) {
+      grid-column: auto;
+    }
+    .skills-wrapper:nth-child(10) {
+      grid-column: auto;
+    }
+  }
+
+}

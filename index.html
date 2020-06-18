@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8dc0a6a29a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,700&display=swap"rel="stylesheet">
+
+
+  <title>Christopher Alves</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="nav">
+        <h1>
+          <img class="logoHeader" src="assets/img/chrisAlvesLogo.svg" alt="">
+        </h1>
+        <div class="navMenu">
+          <ul class="menuDesktop">
+            <li class="link" >Home</li>
+            <li class="link">About</li>
+            <li class="link">Skills</li>
+            <li class="link">Works</li>
+            <li class="link">Contact</li>
+          </ul>
+        </div>
+        <div id="menuBtn">
+          <a id="btnOpen" onclick="slideToggle()">
+            <i class="fas fa-bars fa-2x"></i>
+          </a>
+          <a id="btnClose" onclick="slideToggle()">
+            <i class="far fa-times-circle fa-2x"></i>
+          </a>
+        </div>
+      </nav>
+      <div id="menuSlide">
+        <ul class="list-menu">
+          <li class="link-menu">Home</li>
+          <li class="link-menu">About</li>
+          <li class="link-menu">Skills</li>
+          <li class="link-menu">Works</li>
+          <li class="link-menu">Contact</li>
+        </ul>
+      </div>
+      <div class="banner-text">
+        <h2>
+          <span>Hello, i'm a</span><br> front-end developer</h2>
+      </div>
+      <div class="mouse-icon">
+        <div class="wheel"></div>
+      </div>
+
+    </header>
+    <main>
+
+      <div class="title">
+        <h3>about</h3>
+        <img src="assets/img/underTitle.svg" alt="">
+      </div>
+
+      <div class="about">
+        <div class="about-text" data-anime="left">
+          <p><span>Hi, my name is Christopher Alves,</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Cras fringilla rhoncus metus nec cursus. Aliquam nibh sapien, mattis non finibus sit amet, efficitur ut
+            justo. Maecenas tortor magna, rutrum in euismod egestas, accumsan vehicula ligula. Sed scelerisque, nunc at
+            egestas ultrices, ex lectus venenatis ante, sit amet tempus nibh nunc in sem. Nulla viverra augue ut ligula
+            tempor varius. Nulla a nibh dui. Sed augue quam, cursus sed cursus at, malesuada eget ex. Maecenas finibus
+            nisi in faucibus venenatis. Vestibulum et consectetur velit. Morbi tellus eros, dignissim id semper id,
+            rutrum ut nibh. Vivamus ante sapien, mattis et arcu vel, sagittis aliquam quam. Curabitur erat dolor,
+            vulputate fermentum iaculis at, dignissim eget augue.
+          </p>
+        </div>
+        <div class="about-card" data-anime="right">
+          <div class="about-card-image" id="pentagon">
+
+          </div>
+          <div class="about-card-content" >
+            <ul>
+              <li>
+                <span>Name: </span> Christopher Alves
+              </li>
+              <hr>
+              <li>
+                <span>Date of birth: </span> 1st July 1992
+              </li>
+              <hr>
+              <li>
+                <span>City: </span> Florianópolis/SC - Brazil
+              </li>
+              <hr>
+              <li>
+                <span>Phone: </span> (48) 99663-3132
+              </li>
+              <hr>
+              <li>
+                <span>Email: </span> chrisleo.usa@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="about-objective" data-anime="left">
+          <h4>my objective</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla rhoncus metus nec cursus. Aliquam
+            nibh sapien, mattis non finibus sit amet, efficitur ut justo. Maecenas tortor magna, rutrum in euismod
+            egestas, accumsan vehicula ligula. Sed scelerisque, nunc at egestas ultrices, ex lectus venenatis ante, sit
+            amet tempus nibh nunc in sem. Nulla viverra augue ut ligula tempor varius. Nulla a nibh dui. Sed augue quam,
+            cursus sed cursus at, malesuada eget ex.</p>
+        </div>
+
+        
+
+      </div>      
+
+      <div class="skills">
+        <div class="title" data-anime="bottom">
+          <h3>skills</h3>
+          <img src="assets/img/underTitleWhite.svg" alt="">
+        </div>
+
+        <div class="skills-progress" data-anime="bottom">
+          <div class="progress-content" data-appear-top-offset="300">
+            <p>Front-End Developer</p>
+
+            <div class="progressBar" id="frontEnd"></div>
+          </div>
+          
+          <div class="progress-content">
+            <p>UI Designer</p>
+
+            <div class="progressBar " id="uiDesign"></div>
+          </div>
+
+          <div class="progress-content">
+            <p>CS Player</p>
+
+            <div class="progressBar" id="csPlayer"></div>
+          </div>
+
+          <div class="progress-content">
+            <p>Addicted to Coffee</p>
+
+            <div class="progressBar" id="coffee"></div>
+          </div>
+        </div>
+
+        <div class="title second-skills" data-anime="bottom">
+          <h3>Hard Skills</h3>
+        </div>
+
+        <div class="hard-skills" data-anime="bottom">
+
+          <!-- HTML CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="html5"></div>
+            <p class="skill-text">html5</p>
+          </div>
+          <!-- HTML CIRCLE -->
+
+          <!-- CSS3 CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="css3"></div>
+            <p class="skill-text">css3</p>
+          </div>
+          <!-- CSS3 CIRCLE -->
+
+          <!-- JAVASCRIPT CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="javascript"></div>
+            <p class="skill-text">javascript</p>
+          </div>
+          <!-- JAVASCRIPT CIRCLE -->
+
+          <!-- JQUERY CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="jquery"></div>
+            <p class="skill-text">jquery</p>
+          </div>
+          <!-- JQUERY CIRCLE -->
+
+          <!-- BOOTSTRAP CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="bootstrap"></div>
+            <p class="skill-text">bootstrap</p>
+          </div>
+          <!-- BOOTSTRAP CIRCLE -->
+
+          <!-- REACT CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="react"></div>
+            <p class="skill-text">REACT</p>
+          </div>
+          <!-- REACT CIRCLE -->
+
+          <!-- SASS CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="sass"></div>
+            <p class="skill-text">SASS</p>
+          </div>
+          <!-- SASS CIRCLE -->
+
+          <!-- SEO CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="seo"></div>
+            <p class="skill-text">SEO</p>
+          </div>
+          <!-- SEO CIRCLE -->
+
+          <!-- SEMANTIC CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="semantic"></div>
+            <p class="skill-text">semantic code</p>
+          </div>
+          <!-- SEMANTIC CIRCLE -->
+
+          <!-- RESPONSIVE CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="responsive"></div>
+            <p class="skill-text">Responsive Design</p>
+          </div>
+          <!-- RESPONSIVE CIRCLE -->
+
+        </div>
+      
+      </div>
+
+      <div class="soft-skills">
+        <div class="title second-skills" data-anime="bottom">
+          <h3>soft Skills</h3>
+        </div>
+
+        <div class="soft" data-anime="bottom"> 
+
+          <!-- DEDICATION CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="dedication"></div>
+            <p class="skill-text">dedication</p>
+          </div>
+          <!-- DEDICATION CIRCLE -->
+
+          <!-- COMMITMENT CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="commitment"></div>
+            <p class="skill-text">commitment</p>
+          </div>
+          <!-- COMMITMENT CIRCLE -->
+
+          <!-- COMMUNICATION CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="communication"></div>
+            <p class="skill-text">oratory</p>
+          </div>
+          <!-- COMMUNICATION CIRCLE -->
+
+          <!-- PATIENCE CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="patience"></div>
+            <p class="skill-text">patience</p>
+          </div>
+          <!-- PATIENCE CIRCLE -->
+
+          <!-- ETHIC CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="ethic"></div>
+            <p class="skill-text">ethic</p>
+          </div>
+          <!-- ETHIC CIRCLE -->
+
+          <!-- RESILIENCE CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="resilience"></div>
+            <p class="skill-text">resilience</p>
+          </div>
+          <!-- RESILIENCE CIRCLE -->
+
+          <!-- TEAMWORK CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="team"></div>
+            <p class="skill-text">team work</p>
+          </div>
+          <!-- TEAMWORK CIRCLE -->
+
+          <!-- ANALYTICAL CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="analytical"></div>
+            <p class="skill-text">analytical ability</p>
+          </div>
+          <!-- ANALYTICAL CIRCLE -->
+
+          <!-- LEADERSHIP CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="leadership"></div>
+            <p class="skill-text">leadership</p>
+          </div>
+          <!-- LEADERSHIP CIRCLE -->
+
+          <!-- HUMILITY CIRCLE -->
+          <div class="skills-wrapper">
+            <div class="skill-animate" id="humility"></div>
+            <p class="skill-text">humility</p>
+          </div>
+          <!-- HUMILITY CIRCLE -->
+        </div>
+      </div>
+
+      <div class="works">
+        <div class="title" data-anime="bottom">
+          <h3>my works</h3>
+          
+          <!-- <img src="assets/img/underTitle.svg" alt=""> -->
+        </div>
+
+        <div class="work-cards" data-anime="bottom">
+          <div class="single-card">
+            <div class="card-content">
+              <div class="card-description">
+                <p>Aqui virá as informações de alguns fake jobs para portfólio.</p>
+              </div>
+              <div class="btn-card">
+                <a class="btn "href="">Visit Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-card">
+            <div class="card-content">
+              <div class="card-description">
+                <p>Aqui virá as informações de alguns fake jobs para portfólio.</p>
+              </div>
+              <div class="btn-card">
+                <a class="btn "href="">Visit Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-card">
+            <div class="card-content">
+              <div class="card-description">
+                <p>Aqui virá as informações de alguns fake jobs para portfólio.</p>
+              </div>
+              <div class="btn-card">
+                <a class="btn "href="">Visit Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-card">
+            <div class="card-content">
+              <div class="card-description">
+                <p>Aqui virá as informações de alguns fake jobs para portfólio.</p>
+              </div>
+              <div class="btn-card">
+                <a class="btn "href="">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="title">
+          <h3>contact</h3>
+          <img src="assets/img/underTitleWhite.svg" alt="">
+        </div>
+
+        <div class="contact-container" data-anime="bottom">
+          <form class="form">
+            <div class="content">
+              <label for="name">Name:</label>
+              <input class="field" type="text" placeholder="Enter your name" name="name" id="name" autofocus required>
+            </div>
+
+            <div class="content">
+              <label for="phone">Phone:</label>
+              <input class="field" type="tel" placeholder="(00) 00000-0000" name="phone" id="phone" maxlength="11" required>
+            </div>
+
+            <div class="content">
+              <label for="email">Email:</label>
+              <input class="field" type="email" placeholder="Enter your email address" id="email" required>
+            </div>
+
+            <div class="content">
+              <label for="message">Message:</label>
+              <textarea class="field" name="message" id="message" cols="30" rows="10" placeholder="Leave your message here!" ></textarea>
+            </div>
+
+            <a type="submit" href="#" class="btn btn2">submit</a>
+
+          </form>
+        </div>
+      </div>
+
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="assets/img/chrisAlvesLogoWhite.svg" alt="">
+        </div>
+        <div class="copyrights">
+          <p>Made with <span style="color: red;"><i class="far fa-heart fa-lg"></i></span> by Christopher Alves</p>
+        </div>
+        <div class="social-icons" >
+          <a class="footer-icons" href="https://www.linkedin.com/in/chrisleoalves/" target="_blank">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+
+          <a class="footer-icons" href="https://codepen.io/christopheralves" target="_blank">
+            <i class="fab fa-codepen fa-lg"></i>
+          </a>
+
+          <a class="footer-icons" href="https://www.instagram.com/chrisleoalves/" target="_blank">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script src="assets/js/progressbar.min.js"></script>
+  <script src="assets/js/index.js"></script>
+
+</body>
+
+</html>

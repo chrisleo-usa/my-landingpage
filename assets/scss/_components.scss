@@ -1,0 +1,39 @@
+.btn {
+  width: 60%;
+  font-size: 0.625rem;
+  color: $titleColorWhite;
+  border: 0.062rem solid #fff;
+  padding: 0.312rem 0.625rem;  
+  border-radius: 0.625rem;
+  letter-spacing: 0.062rem;
+  transition: 0.5s;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+
+
+  &:hover {
+    color: black;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 0.625rem #fff, 0 0 2.5rem #fff, 0 0 5rem #fff;
+    -moz-box-shadow: 0 0 0.625rem #fff, 0 0 2.5rem #fff, 0 0 5rem #fff;
+    box-shadow: 0 0 0.625rem #fff, 0 0 2.5rem #fff, 0 0 5rem #fff;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+  }
+}
+
+.btn2 {
+  width: 30%;
+
+}
+
+@media (min-width: 600px) {
+  .btn2 {
+    padding: 0.625rem 0;
+    width: 25%;
+    font-size: 0.937rem;
+  }
+}

@@ -1,0 +1,90 @@
+.contact {
+  padding: 1.25rem 1.875rem;
+  background: linear-gradient(176.04deg, #FBFBFB -91.99%, #D7D7D7 -15.07%, #AAAAAA 73.68%);
+
+  .title {
+    color: $titleColorWhite;
+  }
+
+  .contact-container {
+    background-color: darken(#aaaaaa, 40%);
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      margin-bottom: 0.625rem;
+
+      label {
+        margin-bottom: 0.625rem;
+      }
+
+      .field {
+        padding: 5px;
+        resize: none;
+        border-radius: 0.625rem;
+        border: none;
+
+        &:focus {
+          border-color: #80bdff;
+          outline: 0;
+          -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.534);
+          -moz-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.534);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.534);
+        }
+      }
+    }
+
+    .btn {
+      align-self: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    font-size: 1.2rem;
+  }
+
+  .form .content:nth-child(1) {
+    grid-area: userName;
+  }
+
+  .form .content:nth-child(2) {
+    grid-area: phone;
+  }
+  
+  .form .content:nth-child(3) {
+    grid-area: email;
+  }
+  
+  .form .content:nth-child(4) {
+    grid-area: message;
+  }
+
+  .form .btn {
+    grid-area: button;
+    justify-self: center;
+    width: 20%;
+    margin: 1.5rem 0;
+
+  }
+  
+  .contact .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "userName message"
+      "phone message"
+      "email message"
+      "button button";
+    grid-column-gap: 1.5rem;
+  }
+
+}
