@@ -20,7 +20,23 @@ menuBtn.addEventListener('click', () => {
 
 
 //NAVBAR COLOR SCROLL
+window.onscroll = () => scrollFunction();
+let navBar = document.querySelector('.nav');
+let logo = document.querySelector('.logoHeader');
 
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    navBar.style.backgroundColor = '#f7faff';
+    menuBtn.style.width = '35px';
+    menuBtn.style.height = '35px';
+    logo.style.width = '80%'
+  } else {
+    navBar.style.backgroundColor = 'transparent';
+    logo.style.width = '90%'
+    menuBtn.style.width = '40px';
+    menuBtn.style.height = '40px';
+  }
+}
 //NAVBAR COLOR SCROLL
 
 

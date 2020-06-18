@@ -6,7 +6,6 @@
     grid-template-rows: 10vh 90vh;
     position: relative;
     justify-items: center;
-
   }
 
   header::after {
@@ -37,7 +36,7 @@
     z-index: 5;
     width: 100%;
     overflow: hidden;
-    background-color: rgb(224, 224, 224);
+    background-color: $menuMobileBackground;
     -webkit-transition: ease-in 0.4s;
     -moz-transition: ease-in 0.4s;
     -o-transition: ease-in 0.4s;
@@ -86,11 +85,11 @@
       }
 
       .menuBtnBurger::before {
-        transform: translateY(-8px);
+        transform: translateY(-7px);
       }
 
       .menuBtnBurger::after {
-        transform: translateY(8px);
+        transform: translateY(7px);
       }
 
     }
@@ -112,9 +111,9 @@
   header #menuSlide {
     position: fixed;
     right: -40%;
-    width: 40%;
+    width: 30%;
     max-width: 140px;
-    background-color: black;
+    background-color: $menuMobileBackground;
     transition: right 0.4s linear;
     z-index: 5;
     display: flex;
@@ -124,7 +123,7 @@
 
     a {
       color: black;
-      text-align: right;
+      text-align: center;
       padding: 15px 0 15px 15px;
       cursor: pointer;
       transition: 0.2s;
@@ -133,6 +132,8 @@
 
       &:hover {
         background-color: white;
+        border-top: 1px solid rgb(149, 237, 245);
+        border-bottom: 1px solid rgb(149, 237, 245);
 
       }
     }
@@ -255,8 +256,12 @@
   
       h1 {
         grid-column: 1/1;
-  
       }
+
+    }
+
+    #menuSlide .link-menu{
+      font-size: 1.2rem;
     }
 
   }
@@ -271,7 +276,7 @@
 
 @media (min-width: 768px) {
 
-  .navMenu {
+  .container header .nav .navMenu {
     display: block;
     width: auto;
     grid-column-start: 3;
@@ -280,10 +285,11 @@
     font-size: 1.1rem;
 
     .link {
+      color: black;
       padding: 0.312rem;
       display: inline-block;
       text-transform: uppercase;   
-      margin-left: 0.312rem;  
+      margin-right: 0.625rem;  
       cursor: pointer;
     
     }
@@ -304,13 +310,12 @@
     .link:hover::after {
       width: 100%;
     }
-
   }
 
-  #menuBtn {
+  .container header .nav .menuBtn {
     display: none;
   }
-  
+
   .container header .banner-text h2 {
     font-size: 3rem;
     
@@ -318,5 +323,14 @@
       font-size: 1.5rem;
     }
   }
+}
 
+@media (min-width: 992px) {
+  .container header .nav .navMenu {
+    font-size: 1.4rem;
+
+    .link {
+      margin-right: 30px;
+    }
+  }
 }

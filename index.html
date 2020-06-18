@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,700&display=swap"rel="stylesheet">
 
+  <!-- TODO: ARRUMAR CAMPO PARA ENTRAREM EM CONTATO! -->
 
   <title>Christopher Alves</title>
 </head>
@@ -17,25 +18,25 @@
     <header>
       <nav class="nav">
         <h1>
-          <img class="logoHeader" src="assets/img/chrisAlvesLogo.svg" alt="">
+          <a href="#">
+            <img class="logoHeader" src="assets/img/chrisAlvesLogo.svg" alt="logo">
+          </a>
         </h1>
         <div class="navMenu">
-          <a class="link">Home</a>
-          <a class="link">About</a>
-          <a class="link">Skills</a>
-          <a class="link">Works</a>
-          <a class="link">Contact</a>
+          <a href="#about" class="link">About</a>
+          <a href="#skills" class="link">Skills</a>
+          <a href="#works" class="link">Works</a>
+          <a href="#contact" class="link">Contact</a>
         </div>
         <div class="menuBtn">
           <div class="menuBtnBurger"></div>
         </div>
       </nav>
       <div id="menuSlide">
-        <a class="link-menu">Home</a>
-        <a class="link-menu">About</a>
-        <a class="link-menu">Skills</a>
-        <a class="link-menu">Works</a>
-        <a class="link-menu">Contact</a>
+        <a href="#about" class="link-menu">About</a>
+        <a href="#skills" class="link-menu">Skills</a>
+        <a href="#works" class="link-menu">Works</a>
+        <a href="#contact" class="link-menu">Contact</a>
       </div>
       <div class="banner-text">
         <h2>
@@ -53,7 +54,7 @@
         <img src="assets/img/underTitle.svg" alt="">
       </div>
 
-      <div class="about">
+      <div class="about" id="about">
         <div class="about-text" data-anime="left">
           <p><span>Hi, my name is Christopher Alves,</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Cras fringilla rhoncus metus nec cursus. Aliquam nibh sapien, mattis non finibus sit amet, efficitur ut
@@ -65,7 +66,7 @@
             vulputate fermentum iaculis at, dignissim eget augue.
           </p>
         </div>
-        <div class="about-card" data-anime="right">
+        <div class="about-card" data-anime="left">
           <div class="about-card-image" id="pentagon">
 
           </div>
@@ -106,7 +107,7 @@
 
       </div>      
 
-      <div class="skills">
+      <div class="skills" id="skills">
         <div class="title" data-anime="bottom">
           <h3>skills</h3>
           <img src="assets/img/underTitleWhite.svg" alt="">
@@ -297,7 +298,7 @@
         </div>
       </div>
 
-      <div class="works">
+      <div class="works" id="works">
         <div class="title" data-anime="bottom">
           <h3>my works</h3>
           <img src="assets/img/underTitle.svg" alt="">
@@ -334,13 +335,32 @@
         </div>
       </div>
 
-      <div class="contact">
+      <div class="contact" id="contact">
         <div class="title">
           <h3>contact</h3>
           <img src="assets/img/underTitleWhite.svg" alt="">
         </div>
 
-        <div class="contact-container" data-anime="bottom">
+        <form action="/action_page.php">
+          <fieldset>
+           <legend>Contact me:</legend>
+
+            <div class="infoContact">
+              <i class="fab fa-whatsapp"></i>
+              <p>(48) 99663-3132</p>
+            </div>
+
+            <div class="infoContact">
+              <i class="fas fa-at"></i>
+              <p>chrisleo.usa@gmail.com</p>
+            </div>
+           
+           
+          </fieldset>
+         </form>
+         
+
+        <!-- <div class="contact-container" data-anime="bottom">
           <form class="form">
             <div class="content">
               <label for="name">Name:</label>
@@ -365,7 +385,7 @@
             <a type="submit" href="#" class="btn btn2">submit</a>
 
           </form>
-        </div>
+        </div> -->
       </div>
 
     </main>
@@ -386,8 +406,8 @@
             <i class="fab fa-codepen fa-lg"></i>
           </a>
 
-          <a class="footer-icons" href="https://www.instagram.com/chrisleoalves/" target="_blank">
-            <i class="fab fa-instagram fa-lg"></i>
+          <a class="footer-icons" href="https://github.com/chrisleo-usa" target="_blank">
+            <i class="fab fa-github"></i>
           </a>
         </div>
       </div>

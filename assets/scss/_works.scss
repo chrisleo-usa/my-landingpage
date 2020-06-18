@@ -1,6 +1,5 @@
 .works {
   padding: 1.875rem;
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -12,16 +11,18 @@
 
   .work-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 30vh 30vh;
     grid-gap: 1.25rem;
-    height: 60%;
+    justify-items: center;
+    max-width: 700px;
+    height: 100%;
     text-align: center;
 
     .single-card {
       width: 100%;
+      max-width: 300px;
       border-radius: 0.625rem;
-      overflow: hidden;
 
       &:nth-child(1) {
         background-image: url(../img/studion.png);
@@ -51,14 +52,14 @@
         transition: all 0.5s;
         padding: 0 0.625rem;
         opacity: 0;
+        border-radius: 0.625rem;
 
         .card-description {
           width: 80%;
           position: absolute;
           top: 50%;
-          font-size: 0.875rem;
+          font-size: 1rem;
           line-height: 1.4;
-          margin-bottom: 1.25rem;
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
           -o-transition: all 0.5s;
@@ -67,7 +68,7 @@
 
         .btn-card {
           position: absolute;
-          top: 80%;
+          top: 90%;
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
           -o-transition: all 0.5s;
@@ -110,29 +111,27 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width:480px) {
   .works .work-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30vh;
 
-    .single-card:last-child {
-      grid-column: 2/2;
+    .single-card .card-content .card-description {
+      top: 40%;
+    }
+
+    .single-card:nth-child(2) .card-content .btn-card {
+      top: 100%;
     }
   }
 }
 
 @media (min-width: 992px) {
   .works {
-    height: auto;
-    margin-bottom: 4rem;
+    align-items: center;
 
     .work-cards {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 250px;
-  
-      .single-card:last-child {
-        grid-column: auto;
-      }
+      min-width: 900px;
     }
   }
-  
 }

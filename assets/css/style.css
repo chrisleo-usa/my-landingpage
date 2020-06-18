@@ -52,6 +52,10 @@ table {
   border-spacing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -172,11 +176,6 @@ h3 {
   transform: translate3d(-50px, 0px, 0px);
 }
 
-[data-anime=right] {
-  -webkit-transform: translate3d(50px, 0px, 0px);
-  transform: translate3d(50px, 0px, 0px);
-}
-
 [data-anime].animate {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
@@ -217,7 +216,7 @@ h3 {
   z-index: 5;
   width: 100%;
   overflow: hidden;
-  background-color: #e0e0e0;
+  background-color: #f5f9fa;
   -webkit-transition: ease-in 0.4s;
   -moz-transition: ease-in 0.4s;
   -o-transition: ease-in 0.4s;
@@ -262,10 +261,10 @@ h3 {
   transition: all 0.5s ease-in-out;
 }
 .container header .nav .menuBtn .menuBtnBurger::before {
-  transform: translateY(-8px);
+  transform: translateY(-7px);
 }
 .container header .nav .menuBtn .menuBtnBurger::after {
-  transform: translateY(8px);
+  transform: translateY(7px);
 }
 .container header .nav .menuBtn.open .menuBtnBurger {
   transform: translateX(-50px);
@@ -280,9 +279,9 @@ h3 {
 .container header #menuSlide {
   position: fixed;
   right: -40%;
-  width: 40%;
+  width: 30%;
   max-width: 140px;
-  background-color: black;
+  background-color: #f5f9fa;
   transition: right 0.4s linear;
   z-index: 5;
   display: flex;
@@ -292,7 +291,7 @@ h3 {
 }
 .container header #menuSlide a {
   color: black;
-  text-align: right;
+  text-align: center;
   padding: 15px 0 15px 15px;
   cursor: pointer;
   transition: 0.2s;
@@ -300,6 +299,8 @@ h3 {
 }
 .container header #menuSlide a:hover {
   background-color: white;
+  border-top: 1px solid #95edf5;
+  border-bottom: 1px solid #95edf5;
 }
 .container header .banner-text {
   position: absolute;
@@ -414,6 +415,9 @@ h3 {
   .container header .nav h1 {
     grid-column: 1/1;
   }
+  .container header #menuSlide .link-menu {
+    font-size: 1.2rem;
+  }
 }
 @media (max-width: 768px) {
   .navMenu {
@@ -421,7 +425,7 @@ h3 {
   }
 }
 @media (min-width: 768px) {
-  .navMenu {
+  .container header .nav .navMenu {
     display: block;
     width: auto;
     grid-column-start: 3;
@@ -429,14 +433,15 @@ h3 {
     text-align: right;
     font-size: 1.1rem;
   }
-  .navMenu .link {
+  .container header .nav .navMenu .link {
+    color: black;
     padding: 0.312rem;
     display: inline-block;
     text-transform: uppercase;
-    margin-left: 0.312rem;
+    margin-right: 0.625rem;
     cursor: pointer;
   }
-  .navMenu .link::after {
+  .container header .nav .navMenu .link::after {
     content: "";
     display: block;
     margin-top: 5px;
@@ -448,11 +453,11 @@ h3 {
     -o-transition: width 0.3s;
     transition: width 0.3s;
   }
-  .navMenu .link:hover::after {
+  .container header .nav .navMenu .link:hover::after {
     width: 100%;
   }
 
-  #menuBtn {
+  .container header .nav .menuBtn {
     display: none;
   }
 
@@ -461,6 +466,14 @@ h3 {
   }
   .container header .banner-text h2 span {
     font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .container header .nav .navMenu {
+    font-size: 1.4rem;
+  }
+  .container header .nav .navMenu .link {
+    margin-right: 30px;
   }
 }
 .title {
@@ -544,9 +557,8 @@ h3 {
   }
 
   .about .about-card {
-    justify-items: center;
     grid-area: card;
-    margin: 0;
+    margin: auto;
   }
 
   .about .about-objective {
@@ -749,7 +761,6 @@ h3 {
 }
 .works {
   padding: 1.875rem;
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -759,16 +770,18 @@ h3 {
 }
 .works .work-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30vh 30vh;
   grid-gap: 1.25rem;
-  height: 60%;
+  justify-items: center;
+  max-width: 700px;
+  height: 100%;
   text-align: center;
 }
 .works .work-cards .single-card {
   width: 100%;
+  max-width: 300px;
   border-radius: 0.625rem;
-  overflow: hidden;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -795,14 +808,14 @@ h3 {
   transition: all 0.5s;
   padding: 0 0.625rem;
   opacity: 0;
+  border-radius: 0.625rem;
 }
 .works .work-cards .single-card .card-content .card-description {
   width: 80%;
   position: absolute;
   top: 50%;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.4;
-  margin-bottom: 1.25rem;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -810,7 +823,7 @@ h3 {
 }
 .works .work-cards .single-card .card-content .btn-card {
   position: absolute;
-  top: 80%;
+  top: 90%;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -843,25 +856,24 @@ h3 {
   transition-delay: 0.2s;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 480px) {
   .works .work-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30vh;
   }
-  .works .work-cards .single-card:last-child {
-    grid-column: 2/2;
+  .works .work-cards .single-card .card-content .card-description {
+    top: 40%;
+  }
+  .works .work-cards .single-card:nth-child(2) .card-content .btn-card {
+    top: 100%;
   }
 }
 @media (min-width: 992px) {
   .works {
-    height: auto;
-    margin-bottom: 4rem;
+    align-items: center;
   }
   .works .work-cards {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 250px;
-  }
-  .works .work-cards .single-card:last-child {
-    grid-column: auto;
+    min-width: 900px;
   }
 }
 .contact {
@@ -871,81 +883,40 @@ h3 {
 .contact .title {
   color: #fff;
 }
-.contact .contact-container {
+.contact fieldset {
+  margin: auto;
+  max-width: 250px;
+  max-height: 200px;
+  background-color: #eeeeee;
+  border: 1px solid #444444;
+  padding: 15px;
+}
+.contact fieldset .infoContact {
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+}
+.contact fieldset .infoContact i {
+  font-size: 25px;
+}
+.contact fieldset .infoContact p {
+  margin-left: 1rem;
+}
+.contact fieldset .infoContact:nth-child(3) {
+  margin-top: 1.25rem;
+}
+.contact legend {
   background-color: #444444;
-}
-.contact .form {
-  display: flex;
-  flex-direction: column;
-  padding: 1.25rem;
-}
-.contact .form .content {
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  margin-bottom: 0.625rem;
-}
-.contact .form .content label {
-  margin-bottom: 0.625rem;
-}
-.contact .form .content .field {
-  padding: 5px;
-  resize: none;
-  border-radius: 0.625rem;
-  border: none;
-}
-.contact .form .content .field:focus {
-  border-color: #80bdff;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.534);
-  -moz-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.534);
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.534);
-}
-.contact .form .btn {
-  align-self: center;
+  margin-left: 1rem;
+  color: white;
+  padding: 0.625rem;
 }
 
-@media (min-width: 768px) {
-  .form {
-    font-size: 1.2rem;
-  }
-
-  .form .content:nth-child(1) {
-    grid-area: userName;
-  }
-
-  .form .content:nth-child(2) {
-    grid-area: phone;
-  }
-
-  .form .content:nth-child(3) {
-    grid-area: email;
-  }
-
-  .form .content:nth-child(4) {
-    grid-area: message;
-  }
-
-  .form .btn {
-    grid-area: button;
-    justify-self: center;
-    width: 20%;
-    margin: 1.5rem 0;
-  }
-
-  .contact .form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "userName message" "phone message" "email message" "button button";
-    grid-column-gap: 1.5rem;
-  }
-}
 .footer-container {
   background-color: #242424;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr;
   grid-template-rows: 1fr;
-  grid-row-gap: 1.25rem;
   align-items: center;
   color: #fff;
   padding: 1.25rem 1.875rem;
@@ -956,28 +927,30 @@ h3 {
 }
 .footer-container .footer-logo {
   width: 100%;
+  max-width: 180px;
 }
 .footer-container .footer-logo img {
   width: 70%;
 }
 .footer-container .footer-icons {
+  font-size: 1rem;
   color: #fff;
+  padding-left: 0.625rem;
 }
 .footer-container .footer-icons:hover {
-  color: rgba(188, 231, 241, 0.8);
-}
-.footer-container .footer-icons .fa-codepen {
-  margin: 0 0.937rem;
+  color: rgba(188, 231, 241, 0.9);
 }
 
 @media (min-width: 600px) {
   .footer-container {
     font-size: 1rem;
+    grid-template-columns: 1fr 2fr 1fr;
   }
 }
 @media (min-width: 768px) {
-  .footer-container .footer-logo {
-    max-width: 180px;
+  .footer-container .social-icons .footer-icons {
+    padding-left: 1.25rem;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 992px) {
