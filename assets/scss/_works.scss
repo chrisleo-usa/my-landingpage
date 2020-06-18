@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 0.625rem;
+    grid-gap: 1.25rem;
     height: 50vh;
     text-align: center;
 
@@ -20,8 +20,15 @@
       border-radius: 0.625rem;
       overflow: hidden;
 
-      background-image: url(../img/Card-photo.jpeg);
-      background-position: center;
+      &:nth-child(1) {
+        background-image: url(../img/studion.png);
+      }
+
+      &:nth-child(2) {
+        background-image: url(../img/Datawarehouse.png);
+      }
+      
+      background-position: top;
       background-size: cover;
       background-repeat: no-repeat;
 

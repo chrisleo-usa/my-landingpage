@@ -728,7 +728,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 0.625rem;
+  grid-gap: 1.25rem;
   height: 50vh;
   text-align: center;
 }
@@ -736,10 +736,15 @@ h3 {
   width: 100%;
   border-radius: 0.625rem;
   overflow: hidden;
-  background-image: url(../img/Card-photo.jpeg);
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.works .work-cards .single-card:nth-child(1) {
+  background-image: url(../img/studion.png);
+}
+.works .work-cards .single-card:nth-child(2) {
+  background-image: url(../img/Datawarehouse.png);
 }
 .works .work-cards .single-card .card-content {
   position: relative;
