@@ -215,13 +215,13 @@ h3 {
   justify-content: space-between;
   align-items: center;
   z-index: 5;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e0e0e0;
   -webkit-transition: ease-in 0.4s;
   -moz-transition: ease-in 0.4s;
   -o-transition: ease-in 0.4s;
   transition: ease-in 0.4s;
-  width: 100%;
-  overflow: hidden;
-  background-color: #e0e0e0;
 }
 .container header .nav h1 {
   grid-column: 1/2;
@@ -233,43 +233,73 @@ h3 {
   transition: ease-in 0.4s;
   max-width: 170px;
 }
-.container header .nav #menuBtn {
+.container header .nav .menuBtn {
   grid-column: 5/5;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  text-align: center;
-}
-.container header .nav #menuBtn a {
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  color: black;
+  transition: all 0.5s ease-in-out;
+  border: 3px solid black;
+  border-radius: 20%;
 }
-.container header .nav #menuBtn #btnClose {
-  display: none;
+.container header .nav .menuBtn .menuBtnBurger {
+  width: 20px;
+  height: 3px;
+  background: black;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.container header .nav .menuBtn .menuBtnBurger::before,
+.container header .nav .menuBtn .menuBtnBurger::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.5s ease-in-out;
+}
+.container header .nav .menuBtn .menuBtnBurger::before {
+  transform: translateY(-8px);
+}
+.container header .nav .menuBtn .menuBtnBurger::after {
+  transform: translateY(8px);
+}
+.container header .nav .menuBtn.open .menuBtnBurger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+.container header .nav .menuBtn.open .menuBtnBurger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.container header .nav .menuBtn.open .menuBtnBurger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 .container header #menuSlide {
   position: fixed;
-  right: -30%;
-  width: 30%;
-  margin-top: 5.937rem;
-  background: #f5f9fa;
+  right: -40%;
+  width: 40%;
+  max-width: 140px;
+  background-color: black;
   transition: right 0.4s linear;
   z-index: 5;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50% 0% 0% 50%/50% 0% 0% 50%;
+  overflow: hidden;
 }
-.container header #menuSlide .link-menu {
-  text-align: center;
-  padding: 0.625rem;
-  text-transform: uppercase;
+.container header #menuSlide a {
+  color: black;
+  text-align: right;
+  padding: 15px 0 15px 15px;
   cursor: pointer;
+  transition: 0.2s;
+  border: none;
 }
-.container header #menuSlide .link-menu:nth-last-of-type(1) {
-  border-bottom: none;
-}
-.container header #menuSlide .link-menu:hover {
-  background-color: rgba(188, 231, 241, 0.8);
-  border-bottom: 0.0625rem solid black;
-  border-bottom-width: 50%;
+.container header #menuSlide a:hover {
+  background-color: white;
 }
 .container header .banner-text {
   position: absolute;

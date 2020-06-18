@@ -1,50 +1,27 @@
 //MENU TOGGLE
-function slideToggle() {
-  let slider = document.getElementById('menuSlide');
-  let btnOpen = document.getElementById('btnOpen');
-  let btnClose = document.getElementById('btnClose');
+const slider = document.querySelector('#menuSlide');
+const menuBtn = document.querySelector('.menuBtn');
 
-  if (slider.style.right == '0px') {
-    slider.style.right = '-30%';
-    btnClose.style.display = 'none';
-    btnOpen.style.display = 'block';
+let menuOpen = false;
 
-
-  } else {
+menuBtn.addEventListener('click', () => {
+  if (!menuOpen) {
+    menuBtn.classList.add('open');
     slider.style.right = '0px';
-    btnOpen.style.display = 'none';
-    btnClose.style.display = 'block';
+    slider.style.top = '40vh';
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    slider.style.right = '-40%';
+    menuOpen = false;
   }
-}
+})  
 //MENU TOGGLE
 
 
 //NAVBAR COLOR SCROLL
-window.onscroll = function () { scrollFunction() };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-
-    document.querySelector(".nav").style.backgroundColor = '#f5f9fa';
-    document.querySelector("#menuSlide").style.backgroundColor = '#f5f9fa';
-    document.querySelector(".nav").style.padding = '20px 30px';
-    document.getElementById("menuBtn").style.fontSize = '16px';
-    document.querySelector(".logoHeader").style.width = '100%';
-    document.querySelector("#menuSlide").style.transition = 'all 0.4s';
-
-  } else {
-    document.querySelector(".nav").style.backgroundColor = "transparent";
-    document.querySelector("#menuSlide").style.backgroundColor = "#fff";
-    document.getElementById("menuBtn").style.fontSize = '20px';
-    document.querySelector(".logoHeader").style.width = '120%';
-    document.querySelector("#menuSlide").style.transition = 'all 0.4s';
-  }
-}
 //NAVBAR COLOR SCROLL
-
-
-
-
 
 
 //SKILLS
