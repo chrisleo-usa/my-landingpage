@@ -1,6 +1,9 @@
 .works {
-  margin: 1.875rem;
-  height: 70vh;
+  padding: 1.875rem;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
   .title {
     color: $titleColorGray;
@@ -10,9 +13,9 @@
   .work-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 1.25rem;
-    height: 50vh;
+    height: 60%;
     text-align: center;
 
     .single-card {
@@ -50,9 +53,11 @@
         opacity: 0;
 
         .card-description {
+          width: 80%;
           position: absolute;
           top: 50%;
           font-size: 0.875rem;
+          line-height: 1.4;
           margin-bottom: 1.25rem;
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
@@ -62,7 +67,7 @@
 
         .btn-card {
           position: absolute;
-          top: 70%;
+          top: 80%;
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
           -o-transition: all 0.5s;
