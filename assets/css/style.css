@@ -864,9 +864,6 @@ h3 {
   .works .work-cards .single-card .card-content .card-description {
     top: 40%;
   }
-  .works .work-cards .single-card:nth-child(2) .card-content .btn-card {
-    top: 100%;
-  }
 }
 @media (min-width: 992px) {
   .works {
