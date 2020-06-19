@@ -209,7 +209,7 @@ h3 {
   position: fixed;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding: 1.875rem;
   justify-content: space-between;
   align-items: center;
@@ -226,13 +226,17 @@ h3 {
   grid-column: 1/2;
 }
 .container header .nav h1 img {
+  width: 50%;
+  max-width: 170px;
+  min-width: 83px;
   -webkit-transition: ease-in 0.4s;
   -moz-transition: ease-in 0.4s;
   -o-transition: ease-in 0.4s;
   transition: ease-in 0.4s;
-  max-width: 170px;
 }
 .container header .nav .menuBtn {
+  width: 40px;
+  height: 40px;
   grid-column: 5/5;
   margin-left: auto;
   position: relative;
@@ -408,12 +412,6 @@ h3 {
 @media (min-width: 600px) {
   .container header .banner-text {
     width: 90%;
-  }
-  .container header .nav {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-  .container header .nav h1 {
-    grid-column: 1/1;
   }
   .container header #menuSlide .link-menu {
     font-size: 1.2rem;
